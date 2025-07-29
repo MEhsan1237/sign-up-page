@@ -102,13 +102,23 @@ class _SignUpPageState extends State<SignUpPage> {
             },
             child: Text('Sign Up'),
           ),
-          ElevatedButton(
-            onPressed: () {
+          GestureDetector(
+            onTap: () {
               ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text('Sign Up button pressed')),
+                SnackBar(content: Text('Sign Up tapped')),
               );
             },
-            child: Text('Sign Up'),
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+              decoration: BoxDecoration(
+                color: Colors.blue,
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: Text(
+                'Sign Up',
+                style: TextStyle(color: Colors.white, fontSize: 16),
+              ),
+            ),
           ),
 
           SocialLoginRow(),
