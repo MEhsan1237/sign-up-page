@@ -94,14 +94,7 @@ class _SignUpPageState extends State<SignUpPage> {
             ),
           ),
           SizedBox(height: 10,),
-          ElevatedButton(
-            onPressed: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text('Sign Up button pressed')),
-              );
-            },
-            child: Text('Sign Up'),
-          ),
+
           GestureDetector(
             onTap: () {
               ScaffoldMessenger.of(context).showSnackBar(
