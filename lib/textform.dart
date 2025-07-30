@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:sign_up_page/login_page.dart';
 import 'package:sign_up_page/uri.dart';
 
 class SignUpPage extends StatefulWidget {
@@ -97,9 +98,9 @@ class _SignUpPageState extends State<SignUpPage> {
 
           GestureDetector(
             onTap: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text('Sign Up tapped')),
-              );
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return LoginPage();
+              },));
             },
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
